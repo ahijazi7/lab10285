@@ -3,23 +3,23 @@ import static org.junit.Assert.assertArrayEquals;
 import org.junit.Test;
 
 public class testSelectionSort {
-    @Test
-    public void testPositives() {
-        SelectionSort sorter = new SelectionSort();
-        int[] actual = {5, 9, 3, 1, 2};
-        int[] expected = {1, 2, 3, 5, 9};
-        actual = sorter.basicSelectionSort(actual);
-        assertArrayEquals(expected, actual);
-    }
+	@Test
+	public void testPositives() {
+	    SelectionSort sorter = new SelectionSort();
+	    int[] actual = {5, 9, 3, 1, 2};
+	    int[] expected = {1, 2, 3, 5, 9};
+	    actual = sorter.basicSelectionSort(actual);
+	    assertArrayEquals("The array should be sorted in ascending order", expected, actual);
+	}
 
-    @Test
-    public void testNegatives() {
-        SelectionSort sorter = new SelectionSort();
-        int[] actual = {-3, -1, -7, -4, -5};
-        int[] expected = {-7, -5, -4, -3, -1};
-        actual = sorter.basicSelectionSort(actual);
-        assertArrayEquals(expected, actual);
-    }
+	@Test
+	public void testNegatives() {
+	    SelectionSort sorter = new SelectionSort();
+	    int[] actual = {-3, -1, -7, -4, -5};
+	    int[] expected = {-7, -5, -4, -3, -1};
+	    actual = sorter.basicSelectionSort(actual);
+	    assertArrayEquals("The array should be sorted in ascending order", expected, actual);
+	}
 
     @Test
     public void testMixed() {
