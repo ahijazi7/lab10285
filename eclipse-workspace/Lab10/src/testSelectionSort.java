@@ -21,21 +21,21 @@ public class testSelectionSort {
 	    assertArrayEquals("The array should be sorted in ascending order", expected, actual);
 	}
 
-    @Test
+	@Test
     public void testMixed() {
         SelectionSort sorter = new SelectionSort();
         int[] actual = {0, -1, 5, -3, 2};
         int[] expected = {-3, -1, 0, 2, 5};
         actual = sorter.basicSelectionSort(actual);
-        assertArrayEquals(expected, actual);
+        assertArrayEquals("Mixed array should be sorted from smallest to largest", expected, actual);
     }
-
-    @Test
-    public void testDuplicates() {
-        SelectionSort sorter = new SelectionSort();
-        int[] actual = {2, -1, 2, -1, 0};
-        int[] expected = {-1, -1, 0, 2, 2};
-        actual = sorter.basicSelectionSort(actual);
-        assertArrayEquals(expected, actual);
-    }
+	
+	   @Test
+	    public void testDuplicates() {
+	        SelectionSort sorter = new SelectionSort();
+	        int[] actual = {2, -1, 2, -1, 0};
+	        int[] expected = {-1, -1, 0, 2, 2};
+	        actual = sorter.basicSelectionSort(actual);
+	        assertArrayEquals("Array with duplicates should be sorted from smallest to largest", expected, actual);
+	    }
 }
